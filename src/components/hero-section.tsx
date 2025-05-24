@@ -1,9 +1,6 @@
-"use client";
-
 import { useEffect, useState } from "react";
 import { assets } from "../assets/index.js";
-import Image from "next/image";
-import Header from "@/components/header"
+import Header from "./header";
 
 const bgImages = [assets.bg_1, assets.bg_2, assets.bg_3];
 
@@ -30,16 +27,21 @@ export default function HeroSection() {
             index === currentBgIndex ? "opacity-100 z-0" : "opacity-0 z-0"
           }`}
         >
-          <Image
+          <img
             src={bg}
             alt={`Background ${index + 1}`}
-            fill
-            className="object-cover animate-zoom"
+            style={{
+              objectFit: "cover",
+              width: "100%",
+              height: "100%",
+              position: "absolute",
+              inset: 0,
+            }}
+            className="animate-zoom"
           />
         </div>
       ))}
       <Header />
-
 
       {/* Text Overlay */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-10">

@@ -10,7 +10,8 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  "react-app",
+  "react-app/jest"
 ];
 
 export default eslintConfig;

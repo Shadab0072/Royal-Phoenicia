@@ -1,7 +1,5 @@
-"use client";
+import { assets } from "../assets/index.js";
 
-import Image from "next/image";
-import { assets } from "../assets/index";
 const images = [assets.room1, assets.dining, assets.counter];
 
 export default function AboutUs() {
@@ -11,11 +9,12 @@ export default function AboutUs() {
       <div className="w-1/2 h-full overflow-y-scroll no-scrollbar">
         <div className="flex flex-col h-fit gap-48">
           {images.map((img, index) => (
-            <Image
+            <img
               key={index}
-              src={img}
+              src={typeof img === "string" ? img : img.src}
               alt={`About image ${index + 1}`}
               className="w-full h-screen object-cover"
+              loading="lazy"
             />
           ))}
         </div>

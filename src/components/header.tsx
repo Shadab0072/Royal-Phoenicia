@@ -1,9 +1,5 @@
-"use client";
-
-import Link from "next/link";
-import { assets } from '../assets/index.js'
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { assets } from '../assets/index.js';
+import { Button } from "./ui/button";
 
 const navLinks = ["ROOMS", "WELLNESS", "GASTRO", "HOTEL", "EVENTS", "CONTACT"];
 
@@ -27,11 +23,10 @@ export default function Header() {
 
             {/* PNG Logo */}
             <div className="relative w-16 h-16">
-              <Image
-                src={assets.logo}
+              <img
+                src={typeof assets.logo === 'string' ? assets.logo : assets.logo.src}
                 alt="Royal Logo"
-                fill
-                className="object-contain rounded-full"
+                className="object-contain rounded-full w-16 h-16"
               />
             </div>
 
@@ -54,12 +49,12 @@ export default function Header() {
           <ul className="flex">
             {navLinks.map((link) => (
               <li key={link}>
-                <Link
+                <a
                   href="#"
                   className="inline-block px-6 py-4 text-white text-sm hover:underline underline-offset-24 transition-all duration-300"
                 >
                   {link}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>

@@ -1,5 +1,3 @@
-"use client";
-
 export default function GastronomySection() {
   return (
     <section className="py-24 bg-white">

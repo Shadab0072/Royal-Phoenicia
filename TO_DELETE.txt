@@ -1,0 +1,5 @@
+Delete the following obsolete files/folders after migration to ReactJS:
+- src/app/page.tsx
+- src/app/layout.tsx
+- src/app/
+- next.config.ts

@@ -1,8 +1,6 @@
-"use client"
-
 import { useState } from "react"
 import { ArrowRight } from "lucide-react"
-import { assets } from "../assets/index"
+import { assets } from "../assets/index.js"
 
 export default function EventBoxes() {
   const [isHovered, setIsHovered] = useState(false)
@@ -12,7 +10,7 @@ export default function EventBoxes() {
       {/* Static Background */}
       <div className="absolute inset-0 -z-10">
         <img
-          src={assets.corporation.src}
+          src={typeof assets.corporation === "string" ? assets.corporation : assets.corporation.src}
           alt="Background"
           className="w-full h-full object-cover"
         />

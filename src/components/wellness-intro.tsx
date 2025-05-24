@@ -1,7 +1,4 @@
-"use client";
-
 import { useState } from "react";
-import Image from "next/image";
 import { assets } from "../assets/index.js";
 
 export default function WellnessIntro() {
@@ -45,7 +42,7 @@ export default function WellnessIntro() {
                 isHovered ? "opacity-100 scale-100" : "opacity-0 scale-75"
               }`}
             >
-              <Image
+              <img
                 src={assets.button}
                 alt="arrow"
                 width={122}
