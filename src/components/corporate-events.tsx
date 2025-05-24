@@ -6,7 +6,7 @@ export default function EventBoxes() {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative min-h-[60vh] md:min-h-screen overflow-hidden">
       {/* Static Background */}
       <div className="absolute inset-0 -z-10">
         <img
@@ -17,27 +17,26 @@ export default function EventBoxes() {
       </div>
 
       {/* Scrollable Boxes */}
-      <div className="relative z-10 h-screen overflow-y-scroll snap-y snap-mandatory flex flex-col items-center gap-[100vh] py-20 px-4">
-        
+      <div className="relative z-10 h-[60vh] md:h-screen overflow-y-auto snap-y snap-mandatory flex flex-col items-center gap-12 md:gap-[100vh] py-8 md:py-20 px-2 md:px-4">
         {/* Box 1 */}
-        <div className="snap-center border border-white/40 backdrop-blur-md shadow-xl p-4 w-full max-w-md">
-          <div className="bg-white p-12 m-6 border border-gray-400">
-            <h3 className="text-2xl font-serif mb-4 text-center">For companies</h3>
-            <p className="text-gray-600 text-sm mb-6 text-center">
+        <div className="snap-center border border-white/40 backdrop-blur-md shadow-xl p-2 md:p-4 w-full max-w-xs md:max-w-md">
+          <div className="bg-white p-4 md:p-12 m-2 md:m-6 border border-gray-400">
+            <h3 className="text-lg md:text-2xl font-serif mb-2 md:mb-4 text-center">For companies</h3>
+            <p className="text-gray-600 text-xs md:text-sm mb-4 md:mb-6 text-center">
               Host your formal business meetings in a unique and refreshing setting. Enjoy elegant venues, comfortable
               accommodations, and exceptional cuisine that elevate every professional gathering.
             </p>
             <div className="flex justify-center">
               <button
-                className={`relative border border-gray-300 px-6 py-2 rounded-full text-gray-600 text-sm transition-all duration-300 overflow-hidden ${
-                  isHovered ? "pr-10" : ""
+                className={`relative border border-gray-300 px-4 md:px-6 py-2 rounded-full text-gray-600 text-xs md:text-sm transition-all duration-300 overflow-hidden ${
+                  isHovered ? "pr-8 md:pr-10" : ""
                 }`}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
                 <span className="relative z-10">MORE</span>
                 <span
-                  className={`absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center transition-all duration-300 ${
+                  className={`absolute right-2 top-1/2 transform -translate-y-1/2 w-4 md:w-6 h-4 md:h-6 flex items-center justify-center transition-all duration-300 ${
                     isHovered ? "opacity-100" : "opacity-0"
                   }`}
                 >
@@ -47,26 +46,25 @@ export default function EventBoxes() {
             </div>
           </div>
         </div>
-
         {/* Box 2 */}
-        <div className="snap-center border border-white/40 backdrop-blur-md shadow-xl p-4 w-full max-w-md">
-          <div className="bg-white p-12 m-6 border border-gray-400">
-            <h3 className="text-2xl font-serif mb-4 text-center">Family gatherings</h3>
-            <p className="text-gray-600 text-sm mb-6 text-center">
+        <div className="snap-center border border-white/40 backdrop-blur-md shadow-xl p-2 md:p-4 w-full max-w-xs md:max-w-md">
+          <div className="bg-white p-4 md:p-12 m-2 md:m-6 border border-gray-400">
+            <h3 className="text-lg md:text-2xl font-serif mb-2 md:mb-4 text-center">Family gatherings</h3>
+            <p className="text-gray-600 text-xs md:text-sm mb-4 md:mb-6 text-center">
               We know how much your event means to you—be it a jubilee, anniversary, or wedding, we’re here to make
               every detail count with elegance, care, and unforgettable experiences tailored just for you.
             </p>
             <div className="flex justify-center">
               <button
-                className={`relative border border-gray-300 px-6 py-2 rounded-full text-gray-600 text-sm transition-all duration-300 overflow-hidden ${
-                  isHovered ? "pr-10" : ""
+                className={`relative border border-gray-300 px-4 md:px-6 py-2 rounded-full text-gray-600 text-xs md:text-sm transition-all duration-300 overflow-hidden ${
+                  isHovered ? "pr-8 md:pr-10" : ""
                 }`}
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}
               >
                 <span className="relative z-10">MORE</span>
                 <span
-                  className={`absolute right-2 top-1/2 transform -translate-y-1/2 w-6 h-6 flex items-center justify-center transition-all duration-300 ${
+                  className={`absolute right-2 top-1/2 transform -translate-y-1/2 w-4 md:w-6 h-4 md:h-6 flex items-center justify-center transition-all duration-300 ${
                     isHovered ? "opacity-100" : "opacity-0"
                   }`}
                 >

@@ -23,9 +23,9 @@ export default function SecondPortion() {
 	const [isHovered, setIsHovered] = useState(false);
 
 	return (
-		<section className="min-h-screen py-36">
-			<div className="container mx-auto text-center">
-				<div className="w-[60px] text-center mx-auto border border-gray-500 p-4 mb-36">
+		<section className="min-h-[60vh] md:min-h-screen py-12 md:py-36">
+			<div className="container mx-auto text-center px-2 md:px-0">
+				<div className="w-[60px] text-center mx-auto border border-gray-500 p-2 md:p-4 mb-12 md:mb-36">
 					<span className="text-xl text-gray-600 font-light">II</span>
 				</div>
 
@@ -33,7 +33,7 @@ export default function SecondPortion() {
 					{packages.map((pkg, index) => (
 						<div
 							key={pkg.id}
-							className="relative overflow-hidden group md:h-[500px] cursor-pointer bg-[#f9f5ef]"
+							className="relative overflow-hidden group h-48 md:h-[500px] cursor-pointer bg-[#f9f5ef]"
 						>
 							{/* IMAGE HIDDEN INITIALLY - FADE IN ON HOVER */}
 							<div
@@ -58,8 +58,8 @@ export default function SecondPortion() {
 							<div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-white/40 to-transparent z-10 pointer-events-none" />
 
 							{/* TEXT LAYER */}
-							<div className="relative z-20 flex h-full items-center justify-center p-8 text-[#032540] group-hover:text-white transition-colors duration-700">
-								<h1 className="text-7xl font-serif group-hover:scale-125 transform transition-transform duration-700">
+							<div className="relative z-20 flex h-full items-center justify-center p-2 md:p-8 text-[#032540] group-hover:text-white transition-colors duration-700">
+								<h1 className="text-2xl md:text-7xl font-serif group-hover:scale-125 transform transition-transform duration-700">
 									{pkg.title}
 								</h1>
 							</div>
@@ -69,19 +69,19 @@ export default function SecondPortion() {
 			</div>
 
 			{/* Centered Button */}
-			<div className="flex justify-center mt-16 items-center">
+			<div className="flex justify-center mt-8 md:mt-16 items-center">
 				<button
-					className={`relative px-8 text-gray-700 transition-all duration-500 overflow-hidden flex items-center justify-center ${
+					className={`relative px-6 md:px-8 text-gray-700 transition-all duration-500 overflow-hidden flex items-center justify-center text-base md:text-lg ${
 						isHovered
-							? "border-0 w-40 h-40"
-							: "border border-gray-600 w-40 h-15"
+							? "border-0 w-32 md:w-40 h-12 md:h-40"
+							: "border border-gray-600 w-32 md:w-40 h-10 md:h-15"
 					}`}
 					onMouseEnter={() => setIsHovered(true)}
 					onMouseLeave={() => setIsHovered(false)}
 				>
 					{/* Accommodation Text */}
 					<span
-						className={`absolute transition-all duration-500 text-lg font-medium ${
+						className={`absolute transition-all duration-500 text-base md:text-lg font-medium ${
 							isHovered ? "opacity-0 scale-90" : "opacity-100 scale-100"
 						}`}
 					>
@@ -97,8 +97,8 @@ export default function SecondPortion() {
 						<img
 							src={assets.button}
 							alt="arrow"
-							width={122}
-							height={122}
+							width={48}
+							height={48}
 							className="object-contain"
 						/>
 					</span>

@@ -18,7 +18,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative h-[60vh] md:h-screen overflow-hidden">
       {/* Background Image Layers */}
       {bgImages.map((bg, index) => (
         <div
@@ -44,9 +44,9 @@ export default function HeroSection() {
       <Header />
 
       {/* Text Overlay */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-10">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center z-10 px-2">
         <h1
-          className={`text-6xl md:text-8xl font-serif mb-4 transition-all duration-[1500ms] ${
+          className={`text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-serif mb-2 md:mb-4 transition-all duration-[1500ms] ${
             textVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-20"
@@ -57,7 +57,7 @@ export default function HeroSection() {
           Royal Phoenicia
         </h1>
         <p
-          className={`text-xl transition-all duration-[1500ms] delay-500 ${
+          className={`text-base sm:text-lg md:text-xl transition-all duration-[1500ms] delay-500 ${
             textVisible
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-10"
